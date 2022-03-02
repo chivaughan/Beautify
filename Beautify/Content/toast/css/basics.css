@@ -1,0 +1,151 @@
+/*
+	DP Toast jQuery Plugin, Version 1.1
+	Copyright (C) Dustin Poissant 2014
+	See http://htmlpreview.github.io/?https://github.com/dustinpoissant/jquery.dpToast/blob/master/License.html
+	for more information reguarding usage.
+*/
+/*
+	Basics CSS Document
+*/
+@charset "UTF-8";
+/*
+	General Styles
+*/
+* {
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
+	color: inherit;
+	text-align: inherit;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.knot, .cell {
+	display: inline-block !important;
+}
+.cell {
+	vertical-align: top;
+	box-sizing: border-box;
+}
+.wrapper {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.justify {
+	text-align: justify;
+}
+.middle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+h1 {font-size: 2em;}
+h2 {font-size: 	1.5em;}
+h3 {font-size: 1.17em;}
+nav ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+}
+.noscroll {
+	overflow: hidden;
+	position: fixed;
+	display: block;
+}
+.imgWrapper {
+	display: inline-block;
+	max-width: 100%;
+}
+.imgWrapper img {
+	width: 100%;
+}
+
+/*
+	Desktop Styles
+*/
+.full {
+	width: 100% !important;
+}
+.half {
+	width: 50% !important;
+}
+.less {
+	width: 33.333% !important;
+}
+.more {
+	width: 66.667% !important;
+}
+.quarter {
+	width: 25% !important;
+}
+.three-quarter {
+	width: 75% !important;
+}
+.mobile-show, .tablet-show, .desktop-hide {
+	display: none !important;
+}
+.desktop-show {
+	display: inline-block !important;
+}
+footer {
+	text-align: center;
+}
+#sign {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 350px;
+	height: 25px;
+	vertical-align: top;
+	font-size:12px;
+	line-height: 22px;
+	text-decoration: none;
+}
+#sign span {
+	vertical-align: top;
+}
+
+/*
+	Tablet Styles
+*/
+@media (max-width: 900px){
+	.tablet-show, .desktop-hide {
+		display: inline-block !important;
+	}
+	.tablet-hide, .desktop-show {
+		display: none !important;
+	}
+}
+
+/*
+	Mobile Styles
+*/
+@media (max-width: 600px){
+	.tablet-show, .mobile-hide {
+		display: none !important;
+	}
+	.mobile-show, .tablet-hide {
+		display: inline-block !important;
+	}
+	.full, .less, .more, .half, .quarter, .three-quarter {
+		width: 100% !important;
+	}
+}

@@ -1,0 +1,27 @@
+
+    .page-numbers
+    {
+        border: 1px solid #CCC;
+        color: #808185;
+        display: block;
+        float: left;
+        font-size: 9pt;
+        margin-right: 3px;
+        padding: 4px 4px 3px;
+        text-decoration: none;
+    }
+
+    .page-numbers.current
+    {
+        background-color: #808185;
+        border: 1px solid #808185;
+        color: white;
+        font-weight: bold;
+    }
+
+    .page-numbers.next, .page-numbers.prev
+    {
+        border: 1px solid white;
+        font-size: 12pt;
+    }
+ 

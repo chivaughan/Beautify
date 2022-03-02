@@ -1,0 +1,287 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="Beautify.FrontEnd" %>
+
+<!DOCTYPE html>
+
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head runat="server">
+        <meta charset="utf-8">
+
+        <title>Online Salon Service for Nigerian Cities - Beautify</title>
+
+        <meta name="description" content="Beautify is an Online Salon Service for Nigerian Cities by Devasol Technologies">
+        <meta name="author" content="devasol technologies">
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="content/frontend/img/favicon.png">
+        <!--<link rel="apple-touch-icon" href="content/frontend/img/icon57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="content/frontend/img/icon180.png" sizes="180x180">-->
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Bootstrap is included in its original form, unaltered -->
+        <link rel="stylesheet" href="content/frontend/css/bootstrap.min.css">
+
+        <!-- Related styles of various icon packs and plugins -->
+        <link rel="stylesheet" href="content/frontend/css/plugins.css">
+        
+        <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+        <link rel="stylesheet" href="content/frontend/css/main.css">
+
+        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+        <link rel="stylesheet" href="content/frontend/css/themes.css">
+        <!-- END Stylesheets -->
+
+        <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
+        <script src="content/frontend/js/vendor/modernizr-respond.min.js"></script>
+
+        
+
+        
+        <!--Custom Select-->
+        <link rel="stylesheet" type="text/css" href="content/frontend/css/custom_select/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="content/frontend/css/custom_select/cs-select.css" />
+        <link rel="stylesheet" type="text/css" href="content/frontend/css/custom_select/cs-skin-border.css" />
+    </head>
+    <body>
+        <form runat="server">
+        <!-- Page Container -->
+        <!-- In the PHP version you can set the following options from inc/config file -->
+        <!-- 'boxed' class for a boxed layout -->
+        <div id="page-container">
+            <!-- Site Header -->
+            <header>
+                <div class="container">
+                    <!-- Site Logo -->
+                    <a href="../Default.aspx" class="site-logo">
+                        <img src="../content/frontend/img/logo_transparent.png" width="220" height="60"/>
+                    </a>
+                    <!-- Site Logo -->
+
+                    <!-- Site Navigation -->
+                    <nav>
+                        <!-- Menu Toggle -->
+                        <!-- Toggles menu on small screens -->
+                        <a href="javascript:void(0)" class="btn btn-default site-menu-toggle visible-xs visible-sm">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <!-- END Menu Toggle -->
+
+                        <!-- Main Menu -->
+                        <ul class="site-nav">
+                            <!-- Toggles menu on small screens -->
+                            <li class="visible-xs visible-sm">
+                                <a href="javascript:void(0)" class="site-menu-toggle text-center">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </li>
+                            <!-- END Menu Toggle -->
+                            <!--<li>
+                                <a href="javascript:void(0)" class="site-nav-sub"><i class="fa fa-angle-down site-nav-arrow"></i>Home</a>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Full Width</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_alt.html">Full Width (Dark)</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_parallax.html">Full Width Parallax</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_video.html">Full Width Video</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_boxed.html">Boxed</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_boxed_alt.html">Boxed (Dark)</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_boxed_parallax.html">Boxed Parallax</a>
+                                    </li>
+                                    <li>
+                                        <a href="index_boxed_video.html">Boxed Video</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="site-nav-sub"><i class="fa fa-angle-down site-nav-arrow"></i>Pages</a>
+                                <ul>
+                                    <li>
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog_post.html">Blog Post</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio_4.html">Portfolio 4 Columns</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio_3.html">Portfolio 3 Columns</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio_2.html">Portfolio 2 Columns</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio_single.html">Portfolio Single</a>
+                                    </li>
+                                    <li>
+                                        <a href="team.html">Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="helpdesk.html">Helpdesk</a>
+                                    </li>
+                                    <li>
+                                        <a href="jobs.html">Jobs</a>
+                                    </li>
+                                    <li>
+                                        <a href="how_it_works.html">How it works</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0)" class="site-nav-sub"><i class="fa fa-angle-down site-nav-arrow"></i>eCommerce</a>
+                                <ul>
+                                    <li>
+                                        <a href="ecom_home.html" class="active">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_search_results.html">Search Results</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_product_list.html">Product List</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_product.html">Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_product_comparison.html">Product Comparison</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_shopping_cart.html">Shopping Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecom_checkout.html">Checkout</a>
+                                    </li>
+                                </ul>
+                            </li>-->
+                            <li>
+                                <a href="../Salons"><i class="fa fa-bar-chart"></i> Salon Dashboard</a>
+                            </li>
+                            <!--<li>
+                                <a href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>-->
+                        </ul>
+                        <!-- END Main Menu -->
+                    </nav>
+                    <!-- END Site Navigation -->
+                </div>
+            </header>
+            <!-- END Site Header -->
+
+            <asp:ContentPlaceHolder runat="server" ID="cphPageContent"></asp:ContentPlaceHolder>
+
+            <!-- Footer -->
+            <footer class="site-footer site-section">
+                <div class="container">
+                    <!-- Footer Links -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">About Us</h4>
+                            <ul class="footer-nav list-inline">
+                                <li><a href="javascript:void(0)">Company</a></li>
+                                <li><a href="javascript:ContactUs();">Contact</a></li>
+                                <li><a href="javascript:ContactUs();">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">Legal</h4>
+                            <ul class="footer-nav list-inline">
+                                <li><a href="javascript:void(0)">Licensing</a></li>
+                                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading">Follow Us</h4>
+                            <ul class="footer-nav footer-nav-social list-inline">
+                                <li><a href="http://facebook.com/beautifyng"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <!--<li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-rss"></i></a></li>-->
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <h4 class="footer-heading"><%=DateTime.Now.Year %> &copy; <a href="http://beautify.com.ng">Beautify</a></h4>
+                            <ul class="footer-nav list-inline">
+                                <li>Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://devasol.com">Devasol Technologies Nig. Ltd - RC 1085169</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END Footer Links -->
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        <!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+        <a href="#" id="to-top"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>!window.jQuery && document.write(decodeURI('%3Cscript src="content/frontend/js/vendor/jquery-1.11.2.min.js"%3E%3C/script%3E'));</script>
+
+        <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+        <script src="content/frontend/js/vendor/bootstrap.min.js"></script>
+        <script src="content/frontend/js/plugins.js"></script>
+        <script src="content/frontend/js/app.js"></script>
+
+            <!-- JQUERY JSON-->
+            <script src="content/frontend/js/jquery.json.min.js"></script>
+        
+            <!--Custom Select-->
+            <script src="content/frontend/js/custom_select/classie.js"></script>
+		<script src="content/frontend/js/custom_select/selectFx.js"></script>
+		<script>
+		    (function () {
+		        [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+		            new SelectFx(el);
+		        });
+		    })();
+
+		    function ContactUs() {
+		        alert('Phone:' + '<%=System.Configuration.ConfigurationManager.AppSettings["beautifyPhoneNumber"] %>' + '\n\n' + 'Email: support@beautify.com.ng'); 
+		    }
+		</script>
+
+            
+            </form>
+        <!-- Toast --> 
+        <script src="content/toast/src/jquery.dpToast.js"></script>
+        <!-- ZEBRA DATE PICKER-->
+    <script type="text/javascript" src="content/zebra_datepicker/javascript/zebra_datepicker.js"></script>
+
+        <!-- Time Picker -->
+        <script type="text/javascript" src="content/timepicker/js/jquery.timepicker.min.js"></script>
+
+
+    </body>
+</html>

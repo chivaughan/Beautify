@@ -1,0 +1,24 @@
+<senddata>
+  <settings>
+    <live>True</live>
+    <return_credits>True</return_credits>
+    <return_msgs_credits_used>True</return_msgs_credits_used>
+    <return_msgs_success_count>True</return_msgs_success_count>
+    <return_msgs_failed_count>True</return_msgs_failed_count>
+    <return_entries_success_status>True</return_entries_success_status>
+    <return_entries_failed_status>True</return_entries_failed_status>
+    <default_senderid>Beautify</default_senderid>
+    <default_date>04/Mar/2009</default_date>
+    <default_time>11:15</default_time>
+    <default_flash>False</default_flash>
+    <default_type>SMS</default_type>
+    <default_costcentre>NA</default_costcentre>
+    <default_validityperiod>1</default_validityperiod>
+  </settings>
+  <entries>
+    <numto>0832297941</numto>
+    <customerid>UnqiueValue1</customerid>
+    <senderid>Beautify</senderid>
+    <data1>This is a test message 1!</data1>
+  </entries>
+</senddata>

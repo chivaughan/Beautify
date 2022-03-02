@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransactionStatusCheck" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ITransactionStatusCheck_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://fidelitypaygate.fidelitybankplc.com/CIPG/webservice/TransactionStatusCheck.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://fidelitypaygate.fidelitybankplc.com/CIPG/webservice/TransactionStatusCheck.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionStatusWithCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionStatusWithCode" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetTransactionStatusWithCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionStatusWithCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_DoWebServiceConfirmationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWebServiceConfirmationStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_DoWebServiceConfirmationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWebServiceConfirmationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetStatusSecure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusSecure" />
+  </wsdl:message>
+  <wsdl:message name="ITransactionStatusCheck_GetStatusSecure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusSecureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransactionStatusCheck">
+    <wsdl:operation name="GetTransactionDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionDetails" message="tns:ITransactionStatusCheck_GetTransactionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionDetailsResponse" message="tns:ITransactionStatusCheck_GetTransactionDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatus" message="tns:ITransactionStatusCheck_GetTransactionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatusResponse" message="tns:ITransactionStatusCheck_GetTransactionStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionStatusWithCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatusWithCode" message="tns:ITransactionStatusCheck_GetTransactionStatusWithCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatusWithCodeResponse" message="tns:ITransactionStatusCheck_GetTransactionStatusWithCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWebServiceConfirmationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionStatusCheck/DoWebServiceConfirmationStatus" message="tns:ITransactionStatusCheck_DoWebServiceConfirmationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionStatusCheck/DoWebServiceConfirmationStatusResponse" message="tns:ITransactionStatusCheck_DoWebServiceConfirmationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusSecure">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetStatusSecure" message="tns:ITransactionStatusCheck_GetStatusSecure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransactionStatusCheck/GetStatusSecureResponse" message="tns:ITransactionStatusCheck_GetStatusSecure_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransactionStatusCheck" type="tns:ITransactionStatusCheck">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ITransactionStatusCheck_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTransactionDetails">
+      <soap:operation soapAction="http://tempuri.org/ITransactionStatusCheck/GetTransactionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionStatus">
+      <soap:operation soapAction="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionStatusWithCode">
+      <soap:operation soapAction="http://tempuri.org/ITransactionStatusCheck/GetTransactionStatusWithCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWebServiceConfirmationStatus">
+      <soap:operation soapAction="http://tempuri.org/ITransactionStatusCheck/DoWebServiceConfirmationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusSecure">
+      <soap:operation soapAction="http://tempuri.org/ITransactionStatusCheck/GetStatusSecure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionStatusCheck">
+    <wsdl:port name="BasicHttpBinding_ITransactionStatusCheck" binding="tns:BasicHttpBinding_ITransactionStatusCheck">
+      <soap:address location="https://fidelitypaygate.fidelitybankplc.com/CIPG/webservice/TransactionStatusCheck.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
