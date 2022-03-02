@@ -1,0 +1,4 @@
+I found the simplest thing was to create a file called .gitattributes in the root folder of my repository, and give it these contents:
+
+* linguist-vendored
+*.cs linguist-vendored=false
